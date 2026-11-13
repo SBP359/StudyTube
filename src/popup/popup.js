@@ -183,9 +183,25 @@
       enabled
     });
     if (res && res.penaltyApplied > 0) {
-      penaltyNotice.innerHTML = `<i class="fa-inline">!</i> Paused StudyTube: <strong>-${res.penaltyApplied} XP deducted</strong>.`;
+      const noticeIcon = document.createElement('i');
+      noticeIcon.className = 'fa-inline';
+      noticeIcon.textContent = '!';
+      const penaltyText = document.createElement('strong');
+      penaltyText.textContent = `-${res.penaltyApplied} XP deducted`;
+      penaltyNotice.replaceChildren(
+        noticeIcon,
+        document.createTextNode(' Paused StudyTube: '),
+        penaltyText,
+        document.createTextNode('.')
+      );
     } else {
-      penaltyNotice.innerHTML = `<i class="fa-inline">✓</i> StudyTube active. Off-topic thumbnails blurred.`;
+      const noticeIcon = document.createElement('i');
+      noticeIcon.className = 'fa-inline';
+      noticeIcon.textContent = '✓';
+      penaltyNotice.replaceChildren(
+        noticeIcon,
+        document.createTextNode(' StudyTube active. Off-topic thumbnails blurred.')
+      );
     }
     await loadPopupState();
   });
