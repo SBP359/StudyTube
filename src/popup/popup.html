@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyTube</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="brand">
+        <img src="../../icons/icon32.png" alt="StudyTube" class="brand-logo" />
+        <span class="brand-badge">StudyTube</span>
+        <span id="policyStatusBadge" class="status-pill status-active">Focused</span>
+      </div>
+      <label class="switch" title="Pause StudyTube (-20 XP)">
+        <input type="checkbox" id="eduModeToggle" checked />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <p id="penaltyNotice" class="penalty-notice">
+      <i class="fa-inline">!</i> Pausing StudyTube costs <strong>20 XP</strong>.
+    </p>
+
+    <!-- Feature 1: Quick Subject Switcher -->
+    <section class="card">
+      <div class="section-header">
+        <h3>Study Feed Topic</h3>
+        <span class="muted-tag">1-Click Switch</span>
+      </div>
+      <div id="quickSubjectsBar" class="subject-pills"></div>
+    </section>
+
+    <!-- Gamification Score, Level & Feature 4: Daily Study Streak -->
+    <section class="card">
+      <div class="level-row">
+        <div>
+          <span class="level-label" id="levelTitle">Level 1 • Novice Scholar</span>
+          <h2 class="xp-total"><span id="xpValue">0</span> XP</h2>
+        </div>
+        <div class="badges-col">
+          <div class="sprint-badge streak-pill" title="Daily Study Streak (+5 XP/day bonus)">
+            <svg class="fa-icon-sm yt-red-icon" viewBox="0 0 384 512"><path fill="currentColor" d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"/></svg>
+            <span id="streakDaysCount">0</span>d Streak
+          </div>
+          <div class="sprint-badge">
+            <svg class="fa-icon-sm" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>
+            <span id="completedSprintsCount">0</span> Sprints
+          </div>
+        </div>
+      </div>
+      <div class="progress-bar-bg">
+        <div id="levelProgressBar" class="progress-bar-fill" style="width: 0%;"></div>
+      </div>
+      <div class="level-subtext">
+        <span id="xpToNextText">25 XP to next level</span>
+      </div>
+    </section>
+
+    <!-- Focus Sprint Timer + Feature 5: Pomodoro Auto-Cycle -->
+    <section class="card">
+      <div class="section-header">
+        <h3 id="sprintPhaseTitle">Study Sprint</h3>
+        <span id="rewardPreview" class="reward-tag">+60 XP</span>
+      </div>
+
+      <div id="sprintSetupView">
+        <div class="duration-Row">
+          <label for="sprintDurationSelect">Duration</label>
+          <select id="sprintDurationSelect">
+            <option value="15">15 mins (+40 XP)</option>
+            <option value="25" selected>25 mins (+60 XP)</option>
+            <option value="45">45 mins (+100 XP)</option>
+            <option value="60">60 mins (+130 XP)</option>
+          </select>
+        </div>
+        <label class="inline-check-row">
+          <input type="checkbox" id="pomodoroAutoCycleToggle" />
+          <span>Pomodoro Auto-Cycle (25m Study / 5m Break)</span>
+        </label>
+        <button id="startSprintBtn" class="btn btn-red btn-full">
+          <svg class="fa-icon-sm" viewBox="0 0 448 512"><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg>
+          Start Study Sprint
+        </button>
+      </div>
+
+      <div id="sprintActiveView" class="hidden">
+        <div class="countdown-display" id="sprintCountdown">25:00</div>
+        <p id="sprintWarningText" class="sprint-warning">Stopping early deducts <strong>10 XP</strong></p>
+        <button id="stopSprintBtn" class="btn btn-secondary btn-full">
+          End Sprint Early (-10 XP)
+        </button>
+      </div>
+    </section>
+
+    <!-- Feature 2: Clean Watch Page ("Study Theater") Quick Toggle -->
+    <section class="card compact-card">
+      <label class="inline-check-row" style="margin: 0;">
+        <input type="checkbox" id="studyTheaterToggle" checked />
+        <span><strong>Study Theater</strong> (hide comments, chat & end-cards)</span>
+      </label>
+    </section>
+
+    <!-- Session Stats -->
+    <section class="stats-grid">
+      <div class="stat-box">
+        <span class="stat-num" id="approvedCount">0</span>
+        <span class="stat-label">Study Videos Shown</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num" id="blockedCount">0</span>
+        <span class="stat-label">Distractions Blurred</span>
+      </div>
+    </section>
+
+    <!-- Footer Actions -->
+    <footer class="popup-footer">
+      <button id="openOptionsBtn" class="btn btn-secondary btn-full">
+        <svg class="fa-icon-sm" viewBox="0 0 512 512"><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0-5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/></svg>
+        Channels, Playlists & Settings
+      </button>
+      <nav class="project-links" aria-label="Project links">
+        <a href="https://github.com/SBP359/StudyTube" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/SBP359/StudyTube/issues" target="_blank" rel="noopener noreferrer">Issues</a>
+        <a href="https://github.com/sbp359" target="_blank" rel="noopener noreferrer">sbp359</a>
+      </nav>
+      <p class="project-credit">Made with ❤️ by <a href="https://github.com/sbp359" target="_blank" rel="noopener noreferrer">sbp359</a></p>
+    </footer>
+  </div>
+
+  <script src="../shared/policy.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

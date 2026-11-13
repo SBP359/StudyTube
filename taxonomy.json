@@ -1,0 +1,106 @@
+{
+  "subjects": [
+    {
+      "subject_id": "cbse_ncert",
+      "label": "CBSE / NCERT",
+      "parent_id": null,
+      "keywords": [
+        "NCERT",
+        "CBSE",
+        "chapter",
+        "class 10",
+        "class 11",
+        "class 12",
+        "board exam"
+      ]
+    },
+    {
+      "subject_id": "jee",
+      "label": "JEE preparation",
+      "parent_id": null,
+      "keywords": [
+        "JEE Main",
+        "JEE Advanced",
+        "IIT-JEE",
+        "physics",
+        "chemistry",
+        "mathematics",
+        "PYQ"
+      ]
+    },
+    {
+      "subject_id": "programming",
+      "label": "Programming",
+      "parent_id": null,
+      "keywords": [
+        "Python",
+        "JavaScript",
+        "C++",
+        "Java",
+        "HTML",
+        "CSS",
+        "SQL",
+        "algorithms",
+        "data structures"
+      ]
+    },
+    {
+      "subject_id": "cybersecurity",
+      "label": "Cybersecurity",
+      "parent_id": null,
+      "keywords": [
+        "cybersecurity",
+        "networking",
+        "Linux",
+        "cryptography",
+        "security fundamentals",
+        "CTF",
+        "defensive security"
+      ]
+    },
+    {
+      "subject_id": "ai_ml",
+      "label": "AI / ML",
+      "parent_id": null,
+      "keywords": [
+        "machine learning",
+        "deep learning",
+        "neural networks",
+        "NLP",
+        "computer vision",
+        "generative AI",
+        "statistics"
+      ]
+    },
+    {
+      "subject_id": "history_humanities",
+      "label": "History & Humanities",
+      "parent_id": null,
+      "keywords": [
+        "history",
+        "civilization",
+        "archaeology",
+        "philosophy",
+        "civics",
+        "political science",
+        "culture",
+        "literature"
+      ]
+    },
+    {
+      "subject_id": "science_docs",
+      "label": "Science documentaries",
+      "parent_id": null,
+      "keywords": [
+        "astronomy",
+        "space",
+        "biology",
+        "physics",
+        "chemistry",
+        "earth science",
+        "research",
+        "scientific discovery"
+      ]
+    }
+  ]
+}

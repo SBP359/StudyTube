@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyTube — Settings, Channels & Playlists</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="options-layout">
+    <header class="top-bar">
+      <div class="brand-title-group">
+        <img src="../../icons/icon48.png" alt="StudyTube" class="brand-header-logo" />
+        <div>
+          <h1>StudyTube</h1>
+          <p class="subtitle">
+            Keep YouTube locked on your study subjects with instant thumbnail blur, a clean study homepage, and approved channels.
+          </p>
+        </div>
+      </div>
+      <div class="score-pill">
+        <span id="optLevelTitle">Level 1</span> • <strong id="optXpValue">0 XP</strong> • <span id="optStreakValue">0d Streak</span>
+      </div>
+    </header>
+
+    <div id="statusToast" class="toast hidden"></div>
+
+    <!-- 1. Disguised Educational Homepage Trick -->
+    <section class="panel">
+      <h2>Study Homepage Feed</h2>
+      <p class="panel-desc">
+        Whenever you open YouTube or click the YouTube logo, StudyTube opens your study feed and clears the search bar so it feels like a clean homepage.
+      </p>
+      <label class="checkbox-row">
+        <input type="checkbox" id="settingRedirectHomepage" checked />
+        <span><strong>Replace YouTube Homepage with Study Feed</strong> (clears search bar text automatically)</span>
+      </label>
+      <div class="search-bar-row" style="margin-top: 10px;">
+        <input
+          type="text"
+          id="customHomeQueryInput"
+          placeholder="Default study feed topic (e.g., CBSE Class 12 Physics Chemistry Mathematics JEE NCERT Lecture)"
+        />
+        <button id="saveHomeQueryBtn" class="btn btn-red">Save Feed Topic</button>
+      </div>
+    </section>
+
+    <!-- 2. Find & Approve Channels by Name -->
+    <section class="panel">
+      <h2>Add Study Channels by Name</h2>
+      <p class="panel-desc">
+        Type any teacher or channel name (e.g., <em>Physics Wallah</em>, <em>NCERT Official</em>, <em>3Blue1Brown</em>). Add it directly by name or search live on YouTube.
+      </p>
+
+      <div class="search-bar-row">
+        <input
+          type="text"
+          id="channelSearchInput"
+          placeholder="Channel or teacher name (e.g., Physics Wallah, KITE VICTERS, Khan Academy)..."
+        />
+        <button id="approveByNameBtn" class="btn btn-red">
+          + Add Channel by Name
+        </button>
+        <button id="findOnYoutubeBtn" class="btn btn-secondary">
+          Search Channels on YouTube ↗
+        </button>
+      </div>
+    </section>
+
+    <!-- 3. Feature 3: Playlist-Only Approval Manager -->
+    <section class="panel">
+      <h2>Approved Course Playlists (<span id="approvedPlaylistsCount">0</span>)</h2>
+      <p class="panel-desc">
+        Allow a specific chapter or course playlist URL (or `PL...` ID) without unlocking unrelated uploads from a mixed-content channel.
+      </p>
+      <div class="search-bar-row" style="margin-bottom: 12px;">
+        <input
+          type="text"
+          id="playlistUrlInput"
+          placeholder="Paste YouTube Playlist URL or ID (e.g., https://www.youtube.com/playlist?list=PL...)"
+        />
+        <input
+          type="text"
+          id="playlistTitleInput"
+          class="compact-input"
+          placeholder="Course label (e.g., Class 12 Electrostatics)"
+        />
+        <button id="approvePlaylistBtn" class="btn btn-red">
+          + Allow Playlist Only
+        </button>
+      </div>
+      <div id="approvedPlaylistsList" class="item-list"></div>
+    </section>
+
+    <!-- 4. Approved Channels Whitelist -->
+    <section class="panel">
+      <div class="panel-header-row">
+        <h2>Approved Channels (<span id="approvedChannelsCount">0</span>)</h2>
+      </div>
+      <div id="approvedChannelsList" class="item-list"></div>
+    </section>
+
+    <!-- 5. Feed, Blur, Study Theater & Pomodoro Controls -->
+    <div class="two-col-grid">
+      <section class="panel">
+        <h2>Filtering & Study Theater</h2>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingBasicEduAllow" checked />
+          <span><strong>Smart study filter</strong> (automatically unblur lectures matching your subjects)</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingHideThumbnails" checked />
+          <span><strong>Blur off-topic thumbnails</strong> (instant CSS blur with zero lag)</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingHideShorts" checked />
+          <span><strong>Hide YouTube Shorts</strong> shelves and tabs</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingHideRecommendations" />
+          <span><strong>Hide right-side recommendations</strong> while watching lectures</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingStudyTheater" checked />
+          <span><strong>Study Theater Mode</strong> (clean watch page)</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingHideComments" checked />
+          <span><strong>Hide comments</strong> below videos</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingHideLiveChat" checked />
+          <span><strong>Hide live chat</strong> on streams and premieres</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingHideEndScreen" checked />
+          <span><strong>Hide end-screen popups</strong> at the end of lectures</span>
+        </label>
+      </section>
+
+      <section class="panel">
+        <h2>Pomodoro & Subject Preferences</h2>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingPomodoroAutoCycle" />
+          <span><strong>Pomodoro Auto-Cycles</strong> (auto-start 5m break after study sprint)</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settingDesktopNotifications" checked />
+          <span><strong>Desktop notifications</strong> when a sprint or break finishes</span>
+        </label>
+
+        <div class="subheading" style="margin-top: 12px;">Subjects</div>
+        <div id="subjectCheckboxes" class="chips-container"></div>
+
+        <div class="subheading" style="margin-top: 14px;">Languages</div>
+        <div id="languageCheckboxes" class="chips-container"></div>
+      </section>
+    </div>
+
+    <!-- 6. Curated Seed Candidates -->
+    <section class="panel">
+      <div class="panel-header-row">
+        <div>
+          <h2>Recommended Study Channels</h2>
+          <p class="panel-desc">Click <strong>+ Allow</strong> on any channel to add it to your approved list.</p>
+        </div>
+        <input
+          type="text"
+          id="seedFilterInput"
+          class="compact-input"
+          placeholder="Filter channels..."
+        />
+      </div>
+      <div id="seedCandidatesList" class="seed-grid"></div>
+    </section>
+
+    <!-- 7. Block Overrides & Backup -->
+    <div class="two-col-grid">
+      <section class="panel">
+        <h2>Custom Block / Allow Rules</h2>
+        <div class="search-bar-row" style="margin-bottom: 10px;">
+          <input
+            type="text"
+            id="blockChannelInput"
+            placeholder="Channel name or Video ID..."
+          />
+          <button id="addBlockChannelBtn" class="btn btn-secondary">Block Channel</button>
+          <button id="addBlockVideoBtn" class="btn btn-secondary">Block Video ID</button>
+        </div>
+        <div id="userOverridesList" class="item-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Backup & Reset</h2>
+        <p class="panel-desc">Export your channels and playlists as JSON or reset to default settings.</p>
+        <div class="actions-bar">
+          <button id="exportRulesBtn" class="btn btn-secondary">Export JSON</button>
+          <label class="btn btn-secondary file-label">
+            Import JSON
+            <input type="file" id="importRulesInput" accept=".json,application/json" hidden />
+          </label>
+          <button id="resetDefaultsBtn" class="btn btn-red">Reset Defaults</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../shared/policy.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

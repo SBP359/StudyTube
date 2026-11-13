@@ -1,0 +1,63 @@
+{
+  "channels": {
+    "channel_id": "string primary key; canonical YouTube channel ID (UC...)",
+    "channel_name": "string",
+    "handle": "string nullable; display handle, not identity key",
+    "channel_url": "string",
+    "subjects": "string[]",
+    "languages": "string[]",
+    "country_or_scope": "string nullable",
+    "trust_level": "enum: candidate, verified, restricted, blocked",
+    "approval_status": "enum: pending_review, approved, rejected, suspended",
+    "default_decision": "enum: ALLOW, BLOCK",
+    "allowed_video_policy": "enum: all_uploads, approved_playlists_only, per_video",
+    "source_url": "string nullable",
+    "verification_note": "string nullable",
+    "last_verified_at": "timestamp nullable",
+    "reviewed_by": "string nullable",
+    "created_at": "timestamp",
+    "updated_at": "timestamp"
+  },
+  "videos": {
+    "video_id": "string primary key",
+    "channel_id": "string foreign key",
+    "title": "string nullable",
+    "description_hash": "string nullable",
+    "subjects": "string[]",
+    "language": "string nullable",
+    "classification": "enum: educational, entertainment, mixed, unknown",
+    "decision": "enum: ALLOW, BLOCK",
+    "approval_source": "enum: channel_policy, playlist, manual, rule",
+    "reviewed_at": "timestamp nullable",
+    "expires_at": "timestamp nullable"
+  },
+  "playlists": {
+    "playlist_id": "string primary key",
+    "channel_id": "string foreign key",
+    "title": "string",
+    "subjects": "string[]",
+    "approval_status": "enum: pending_review, approved, rejected"
+  },
+  "user_overrides": {
+    "id": "uuid primary key",
+    "entity_type": "enum: channel, video, playlist",
+    "entity_id": "string",
+    "decision": "enum: ALLOW, BLOCK",
+    "created_at": "timestamp"
+  },
+  "taxonomy": {
+    "subject_id": "string primary key",
+    "label": "string",
+    "parent_id": "string nullable",
+    "keywords": "string[]"
+  },
+  "audit_log": {
+    "id": "uuid primary key",
+    "entity_type": "string",
+    "entity_id": "string",
+    "old_decision": "string nullable",
+    "new_decision": "string",
+    "reason": "string",
+    "created_at": "timestamp"
+  }
+}

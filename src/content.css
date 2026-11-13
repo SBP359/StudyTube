@@ -1,0 +1,193 @@
+/* EDU MODE — Native YouTube-Styled Content CSS (v1.2 — Zero Lag, Instant Heavy Blur, Study Theater) */
+
+/* 1. Disguised Educational Homepage Mode (`&edu_home=1`):
+   Makes YouTube's search results page look and feel like a clean native homepage */
+html.edu-mode-home-disguise ytd-search-sub-menu-renderer,
+html.edu-mode-home-disguise ytd-search-header-renderer,
+html.edu-mode-home-disguise #filter-menu {
+  display: none !important;
+}
+
+/* 2. Hide Shorts shelves and entries when enabled */
+html.edu-mode-active.edu-mode-hide-shorts ytd-reel-shelf-renderer,
+html.edu-mode-active.edu-mode-hide-shorts ytd-rich-shelf-renderer[is-shorts],
+html.edu-mode-active.edu-mode-hide-shorts ytm-reel-shelf-renderer,
+html.edu-mode-active.edu-mode-hide-shorts a[title="Shorts"],
+html.edu-mode-active.edu-mode-hide-shorts ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
+  display: none !important;
+}
+
+/* 3. Hide Watch-Next Recommendation Sidebar when enabled */
+html.edu-mode-active.edu-mode-hide-recommendations #related,
+html.edu-mode-active.edu-mode-hide-recommendations ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* 4. Feature 2 — Clean Watch Page ("Study Theater") Rules:
+   Hides comments, live chat, and end-screen popups so nothing pulls focus away from a lecture */
+html.edu-mode-active.edu-mode-hide-comments ytd-comments,
+html.edu-mode-active.edu-mode-hide-comments #comments,
+html.edu-mode-active.edu-mode-hide-comments ytm-comment-section-renderer {
+  display: none !important;
+}
+
+html.edu-mode-active.edu-mode-hide-chat ytd-live-chat-frame,
+html.edu-mode-active.edu-mode-hide-chat #chat,
+html.edu-mode-active.edu-mode-hide-chat #chat-container {
+  display: none !important;
+}
+
+html.edu-mode-active.edu-mode-hide-endscreen .ytp-ce-element,
+html.edu-mode-active.edu-mode-hide-endscreen .ytp-endscreen-content,
+html.edu-mode-active.edu-mode-hide-endscreen .html5-endscreen,
+html.edu-mode-active.edu-mode-hide-endscreen .ytp-cards-teaser {
+  display: none !important;
+}
+
+/* 5. Instant Default Heavy Blur (Fail-Closed at document_start):
+   Every video card thumbnail starts heavily blurred before images load,
+   and unblurs immediately when marked `.edu-card-approved` or `.edu-card-revealed`. */
+html.edu-mode-active ytd-rich-item-renderer:not(.edu-card-approved):not(.edu-card-revealed) ytd-thumbnail img,
+html.edu-mode-active ytd-rich-item-renderer:not(.edu-card-approved):not(.edu-card-revealed) yt-image img,
+html.edu-mode-active ytd-video-renderer:not(.edu-card-approved):not(.edu-card-revealed) ytd-thumbnail img,
+html.edu-mode-active ytd-video-renderer:not(.edu-card-approved):not(.edu-card-revealed) yt-image img,
+html.edu-mode-active ytd-compact-video-renderer:not(.edu-card-approved):not(.edu-card-revealed) ytd-thumbnail img,
+html.edu-mode-active ytd-grid-video-renderer:not(.edu-card-approved):not(.edu-card-revealed) ytd-thumbnail img,
+html.edu-mode-active .edu-card-blurred:not(.edu-card-revealed) ytd-thumbnail,
+html.edu-mode-active .edu-card-blurred:not(.edu-card-revealed) #thumbnail img,
+html.edu-mode-active .edu-card-blurred:not(.edu-card-revealed) yt-thumbnail-view-model img {
+  filter: blur(28px) grayscale(65%) brightness(0.55) !important;
+  transform: scale(1.08);
+  transition: filter 0.12s ease-out;
+}
+
+html.edu-mode-active ytd-rich-item-renderer:not(.edu-card-approved):not(.edu-card-revealed) ytd-thumbnail,
+html.edu-mode-active ytd-video-renderer:not(.edu-card-approved):not(.edu-card-revealed) ytd-thumbnail,
+html.edu-mode-active ytd-compact-video-renderer:not(.edu-card-approved):not(.edu-card-revealed) ytd-thumbnail {
+  overflow: hidden !important;
+  border-radius: 10px !important;
+}
+
+html.edu-mode-active .edu-card-blurred:not(.edu-card-revealed) #video-title,
+html.edu-mode-active .edu-card-blurred:not(.edu-card-revealed) #video-title-link {
+  opacity: 0.45;
+}
+
+/* Crisp unblurred state for approved educational videos */
+html.edu-mode-active .edu-card-approved ytd-thumbnail img,
+html.edu-mode-active .edu-card-approved yt-image img,
+html.edu-mode-active .edu-card-revealed ytd-thumbnail img,
+html.edu-mode-active .edu-card-revealed yt-image img {
+  filter: none !important;
+  transform: none !important;
+}
+
+/* 6. Clean Compact Action Bar under Blurred Cards (No heavy overlay, no glow, no shadow) */
+.edu-inline-action-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 4px 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.edu-blur-tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: #aaaaaa;
+  background: #272727;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Flat Native YouTube Buttons (Zero box-shadow, zero glow) */
+.edu-clean-btn {
+  appearance: none;
+  background: #272727;
+  color: #f1f1f1;
+  border: 1px solid #3f3f3f;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.edu-clean-btn:hover {
+  background: #3f3f3f;
+}
+
+.edu-clean-btn-red {
+  background: #cc0000;
+  color: #ffffff;
+  border-color: #cc0000;
+}
+
+.edu-clean-btn-red:hover {
+  background: #a80000;
+  border-color: #a80000;
+}
+
+.edu-channel-search-btn {
+  margin-right: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+/* 7. Direct Watch Page Simple Modal (Clean dark surface, YouTube Red accent, zero shadows/glow) */
+#edu-mode-watch-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.96);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.edu-watch-modal {
+  max-width: 480px;
+  width: 100%;
+  background: #181818;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  padding: 24px;
+  color: #f1f1f1;
+  box-shadow: none !important;
+}
+
+.edu-modal-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ff0000;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.edu-watch-modal h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.edu-watch-modal p {
+  margin: 0 0 18px 0;
+  font-size: 13.5px;
+  color: #aaaaaa;
+  line-height: 1.5;
+}
+
+.edu-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

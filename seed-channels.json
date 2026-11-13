@@ -1,0 +1,868 @@
+{
+  "schema_version": "1.0.0",
+  "generated_date": "2026-11-13",
+  "policy": "strict",
+  "default_decision": "BLOCK",
+  "important_note": "Every entry is a candidate, not an approved channel. Resolve canonical channel IDs and verify official identity before changing approval_status to approved. A handle hint is not proof of identity.",
+  "channels": [
+    {
+      "seed_id": "EDU-001",
+      "channel_name": "NCERT Official",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "CBSE / NCERT"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Official curriculum source; verify official channel identity",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-002",
+      "channel_name": "Magnet Brains",
+      "handle_hint": "@magnetbrainseducation",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@magnetbrainseducation",
+      "subjects": [
+        "CBSE / NCERT",
+        "History & Humanities"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "School lessons and NCERT-aligned material",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-003",
+      "channel_name": "Physics Wallah",
+      "handle_hint": "@PhysicsWallah",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@PhysicsWallah",
+      "subjects": [
+        "JEE preparation",
+        "CBSE / NCERT"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Exam preparation; review channel identity and individual channel scope",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-004",
+      "channel_name": "JEE Wallah",
+      "handle_hint": "@PW-JEEWallah",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@PW-JEEWallah",
+      "subjects": [
+        "JEE preparation"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Dedicated JEE preparation channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-005",
+      "channel_name": "SATHEE IIT Kanpur",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "JEE preparation",
+        "CBSE / NCERT"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Government-supported exam preparation initiative; resolve official channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-006",
+      "channel_name": "NPTEL",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "Programming",
+        "AI / ML",
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "University-level courses; resolve the specific official NPTEL channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-007",
+      "channel_name": "KITE VICTERS",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "CBSE / NCERT"
+      ],
+      "languages": [
+        "Malayalam",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Kerala educational broadcasting; resolve official channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-008",
+      "channel_name": "Khan Academy",
+      "handle_hint": "@khanacademy",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@khanacademy",
+      "subjects": [
+        "CBSE / NCERT",
+        "JEE preparation",
+        "History & Humanities"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Broad school and foundational education",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-009",
+      "channel_name": "LearnoHub",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "CBSE / NCERT"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "School science and mathematics; verify exact channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-010",
+      "channel_name": "Unacademy JEE",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "JEE preparation"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Exam-preparation candidate; verify exact channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-011",
+      "channel_name": "3Blue1Brown",
+      "handle_hint": "@3blue1brown",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@3blue1brown",
+      "subjects": [
+        "JEE preparation",
+        "AI / ML"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Mathematical visual explanations",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-012",
+      "channel_name": "Numberphile",
+      "handle_hint": "@numberphile",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@numberphile",
+      "subjects": [
+        "JEE preparation",
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Mathematics interviews and explainers",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-013",
+      "channel_name": "MinutePhysics",
+      "handle_hint": "@minutephysics",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@minutephysics",
+      "subjects": [
+        "JEE preparation",
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Physics explainers",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-014",
+      "channel_name": "Veritasium",
+      "handle_hint": "@veritasium",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@veritasium",
+      "subjects": [
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Science and engineering explainers; inspect individual videos",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-015",
+      "channel_name": "Kurzgesagt – In a Nutshell",
+      "handle_hint": "@kurzgesagt",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@kurzgesagt",
+      "subjects": [
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Animated science explainers",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-016",
+      "channel_name": "PBS Space Time",
+      "handle_hint": "@pbsspacetime",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@pbsspacetime",
+      "subjects": [
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Physics, cosmology and astrophysics",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-017",
+      "channel_name": "SciShow",
+      "handle_hint": "@scishow",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@scishow",
+      "subjects": [
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Science explainers",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-018",
+      "channel_name": "CrashCourse",
+      "handle_hint": "@crashcourse",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@crashcourse",
+      "subjects": [
+        "CBSE / NCERT",
+        "History & Humanities",
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Structured courses across humanities and sciences",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-019",
+      "channel_name": "TED-Ed",
+      "handle_hint": "@TEDEd",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@TEDEd",
+      "subjects": [
+        "History & Humanities",
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Short educational lessons",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-020",
+      "channel_name": "National Geographic",
+      "handle_hint": "@NatGeo",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@NatGeo",
+      "subjects": [
+        "Science documentaries",
+        "History & Humanities"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Documentary and factual science content; mixed formats require review",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-021",
+      "channel_name": "NASA",
+      "handle_hint": "@NASA",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@NASA",
+      "subjects": [
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "United States",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Official space and science material",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-022",
+      "channel_name": "Smithsonian",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "History & Humanities",
+        "Science documentaries"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "United States",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Museum and research institution; resolve official channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-023",
+      "channel_name": "The British Museum",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "History & Humanities"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "United Kingdom",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Museum history and culture content; resolve official channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-024",
+      "channel_name": "Heimler's History",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "History & Humanities"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "United States",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "History instruction; resolve official channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-025",
+      "channel_name": "OverSimplified",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "History & Humanities"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Animated history explainers; educational but stylized",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-026",
+      "channel_name": "freeCodeCamp.org",
+      "handle_hint": "@freecodecamp",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@freecodecamp",
+      "subjects": [
+        "Programming",
+        "AI / ML"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Long-form programming courses",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-027",
+      "channel_name": "The Coding Train",
+      "handle_hint": "@TheCodingTrain",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@TheCodingTrain",
+      "subjects": [
+        "Programming",
+        "AI / ML"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Creative coding and programming lessons",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-028",
+      "channel_name": "Neso Academy",
+      "handle_hint": "@nesoacademy",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@nesoacademy",
+      "subjects": [
+        "Programming",
+        "JEE preparation"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Computer science and engineering lessons",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-029",
+      "channel_name": "Gate Smashers",
+      "handle_hint": null,
+      "channel_id": null,
+      "channel_url": null,
+      "subjects": [
+        "Programming"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "country_or_scope": "India",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Computer science and exam-oriented lessons; resolve official channel",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-030",
+      "channel_name": "Computerphile",
+      "handle_hint": "@computerphile",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@computerphile",
+      "subjects": [
+        "Programming",
+        "Cybersecurity",
+        "AI / ML"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "United Kingdom",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Computer science interviews and explainers",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-031",
+      "channel_name": "Ben Eater",
+      "handle_hint": "@BenEater",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@BenEater",
+      "subjects": [
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Computer architecture and electronics projects",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-032",
+      "channel_name": "Fireship",
+      "handle_hint": "@Fireship",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@Fireship",
+      "subjects": [
+        "Programming",
+        "AI / ML"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Software development explainers; inspect each upload",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-033",
+      "channel_name": "Traversy Media",
+      "handle_hint": "@TraversyMedia",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@TraversyMedia",
+      "subjects": [
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Web development tutorials",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-034",
+      "channel_name": "LiveOverflow",
+      "handle_hint": "@LiveOverflow",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@LiveOverflow",
+      "subjects": [
+        "Cybersecurity",
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Security research and educational explanations; review each video",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-035",
+      "channel_name": "John Hammond",
+      "handle_hint": "@JohnHammond010",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@JohnHammond010",
+      "subjects": [
+        "Cybersecurity",
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "United States",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Cybersecurity education and CTF content; review each video",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-036",
+      "channel_name": "David Bombal",
+      "handle_hint": "@davidbombal",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@davidbombal",
+      "subjects": [
+        "Cybersecurity",
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Networking and security education; mixed interview content requires review",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-037",
+      "channel_name": "NetworkChuck",
+      "handle_hint": "@NetworkChuck",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@NetworkChuck",
+      "subjects": [
+        "Cybersecurity",
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "United States",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Networking and IT education; review individual videos",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-038",
+      "channel_name": "StatQuest with Josh Starmer",
+      "handle_hint": "@statquest",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@statquest",
+      "subjects": [
+        "AI / ML"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Statistics and machine learning explanations",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-039",
+      "channel_name": "DeepLearningAI",
+      "handle_hint": "@deeplearningai",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@deeplearningai",
+      "subjects": [
+        "AI / ML",
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Machine learning and AI education",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-040",
+      "channel_name": "Google for Developers",
+      "handle_hint": "@GoogleDevelopers",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@GoogleDevelopers",
+      "subjects": [
+        "Programming",
+        "AI / ML"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Developer education; broad channel, video-level review",
+      "last_verified_at": null,
+      "reviewed_by": null
+    },
+    {
+      "seed_id": "EDU-041",
+      "channel_name": "IBM Technology",
+      "handle_hint": "@IBMTechnology",
+      "channel_id": null,
+      "channel_url": "https://www.youtube.com/@IBMTechnology",
+      "subjects": [
+        "AI / ML",
+        "Cybersecurity",
+        "Programming"
+      ],
+      "languages": [
+        "English"
+      ],
+      "country_or_scope": "Global",
+      "trust_level": "candidate",
+      "approval_status": "pending_review",
+      "default_decision": "BLOCK",
+      "verification_note": "Technology explainers; broad channel, video-level review",
+      "last_verified_at": null,
+      "reviewed_by": null
+    }
+  ]
+}
