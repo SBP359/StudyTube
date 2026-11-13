@@ -6,6 +6,11 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "{9e10d7a4-6a9c-4c33-9c37-94fd1fc8fa3b}",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      },
       "strict_min_version": "128.0"
     }
   },
