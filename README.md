@@ -30,6 +30,11 @@ Temporary add-ons are removed when Firefox restarts. A permanent installation re
 ```bash
 node tests/policy.test.js
 ```
+## Support
+
+If you find this extension useful, you can support its development on Ko-fi:
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/sbp359)
 
 ## Links
 
